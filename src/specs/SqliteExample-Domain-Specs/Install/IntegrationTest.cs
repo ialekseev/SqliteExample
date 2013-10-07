@@ -10,7 +10,7 @@ namespace SmartElk.SqliteExample.Domain.Specs.Install
             Install.RegisterComponents();
 
             UnitOfWork.DoAfterSessionOpening =
-                (sessionScope) =>
+                sessionScope =>
                 new SchemaExport(SqliteSessionFactoryCreator.Configuration).Execute(false, true, false,
                                                                                     ((ISession)
                                                                                      (sessionScope.InternalSession))

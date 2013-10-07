@@ -23,7 +23,7 @@ namespace SmartElk.SqliteExample.Domain.Specs
                    var teamRepository = uow.Repository<Team, int>();
                    var employeeRepository = uow.Repository<Employee, string>();
 
-                   var team = new Team() { Id = 13, Name = "Pain", BusinessGroup = "Hell" };                   
+                   var team = new Team() { Id = 13, Name = "Super", BusinessGroup = "SuperBg" };                   
                    teamRepository.Save(team);
 
                    var employee1 = new Employee { Id = "667", FirstName = "Jack", LastName = "Black" };
